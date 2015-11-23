@@ -1,0 +1,210 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs"
+    Inherits="MainMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .body
+        {
+            background-color: #CCFFFF;
+        }
+        .table
+        {
+            background-color:#3399FF;
+        }
+        .tableData
+        {
+            width: 100px;
+            background-color:Silver;
+            font-weight: bold;
+            font-size: smaller;
+            height: 20px;
+            color:Maroon;
+        }
+        .style2
+        {
+            color:Black;
+        }
+        .style3
+        {
+            color: #003000;
+            font-size: smaller;
+        }
+        .style6
+        {
+            color:Maroon;
+            font-family: Verdana;
+            font-size: x-small;
+        }
+        .style7
+        {
+            width: 100%;
+            height: 253px;
+        }
+        .style8
+        {}
+        </style>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <center>
+        <div style="height: 100%">
+            <table width="100%" class="table" border="0" cellpadding="0" cellspacing="0">
+                <tr style="background-color: #CCFFFF">
+              
+                    <td width="50%" align="right" valign="top">
+                    
+                            <table class="style7">
+                                <tr>
+                                    <td class="style8">
+                                        <asp:Label ID="Label1" runat="server" 
+                                            style="text-align:left; font-size: xx-large; font-weight: 700; font-style: italic; vertical-align: middle" 
+                                            Text="Back To My Village   "></asp:Label>
+                                        <img alt="h" src="Images/village.jpg" style="width: 60%; height: 206px" /><table width="100%" bgcolor="#CCFFFF" style="color: #000000">
+                            <tr>
+                                <td>
+                                    <marquee direction="RIGHT" behavior="ALTERNATE">Back To My Village</marquee>
+                                </td>
+                                <td>
+                                    <marquee direction="LEFT" behavior="ALTERNATE">Back To My Village</marquee>
+                                </td>
+                            </tr>
+                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        
+                    </td>
+                </tr>
+                <tr class="table" style="background-color: #CCFFFF">
+                    <td style="color: White; font-size: x-small; font-weight: bold">
+                        &nbsp;</td>
+                </tr>
+                <tr valign="baseline" style="background-color: #003000">
+                    <td valign="middle">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                                               
+                                <td class="tableData" bgcolor="#3333FF">
+                                    <a href="Default.aspx" ><span class="style6">Home</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="frmAboutus.aspx" ><span class="style6">About Us</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="frmContactUs.aspx" ><span class="style6">Contact Us</span></a>
+                                </td>
+                                
+                                
+                                  
+                                <td class="tableData">
+                                    <a href="Admin/Default.aspx"><span class="style6">Admin Login</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="Members/Default.aspx"><span class="style6">Donor Login</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="Volunteers/Default.aspx"><span class="style6">Volunteer Login</span></a>
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" style="font-weight: 700;
+                            font-size: small; color: #FFFFFF">
+                            <tr>
+                                <td width="20%" align="center" valign="top" bgcolor="#CCFFFF">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <td class="style2">
+                                                Activities</td>
+                                                
+                                        </tr>
+                                        <tr>
+                                            <td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <a href="frmActivities.aspx" ><span class="style6">Activity Details</span></a>
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <td class ="style2">
+                                                Donors</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <a href="frmMemberRegistration.aspx"><span class="style6">Donor Signup</span></a>
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <td class="style2">
+                                                Volunteers
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style3">
+                                                <br />
+                                                <br />
+                                                <a href="frmVolunteersMaster.aspx"><span class="style6">Volunteers Signup</span></a>
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="60%" height="100%" valign="top" align="left" style="background-color: #CCFFFF">
+                                    <div>
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            <p>
+                                                <br />
+                                            </p>
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                                <td width="20%" align="center" valign="top" bgcolor="#CCFFFF">
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center style="color: #800000; background-color: #C0C0C0">
+                            <span >. </span>&nbsp;</center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    </form>
+</body>
+</html>

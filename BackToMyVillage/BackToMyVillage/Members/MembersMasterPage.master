@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MembersMasterPage.master.cs"
+    Inherits="Members_MembersMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <link href="../StyleSheet2.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+      </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+      <asp:ScriptManager  ID="scrmgr" runat ="server" ></asp:ScriptManager>
+    <div>
+        <table width="100%">
+             <tr>
+            <td align="center" class="style1">
+              <div class="logo">
+                  BACK TO MY VILLAGE
+                    
+                </div>
+            </td>
+        </tr>
+        <tr>
+        <td align="center" class="style1">
+           </td> 
+          </tr>
+           <tr valign="baseline" style="background-color: #003000">
+                    <td valign="middle" colspan ="3">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                            <td width="13%" class="style5">Donors</td>
+                                <td width="74%" class="style4">
+                                    <asp:Menu ID="Menu1" ForeColor="White" Orientation="Horizontal" runat="server" Style="font-weight: 700;
+                                        font-size: small">
+                                        <DynamicMenuItemStyle BackColor="Silver" Font-Bold="True" Font-Size="Small" ForeColor="Black" />
+                                        <StaticHoverStyle BackColor="Silver"  ForeColor="Black"/>
+                                        <Items>
+                                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Members/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="My Account " Value="Manage Villages ">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmChangePassword.aspx" 
+                                                    Text="Change Password" Value="Change Password"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Donations" Value="Manage Volunteers">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmActivityMonitoringDetails.aspx" 
+                                                    Text="Activity Completion Info" Value="Activity Completion Info">
+                                                </asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmVillageDonationDetails.aspx" 
+                                                    Text="Donate Amount" Value="Donate Amount"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmPaymentTypeDonationDetails.aspx" 
+                                                    Text="Donation Details" Value="Donation Details"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmMemDonationDetails.aspx" 
+                                                    Text="My Donations" Value="My Donations"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Questionnaires" Value="Questionnaires">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmMemActQuestionRaiseMaster.aspx" 
+                                                    Text="Post A Query" Value="Post A Query"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmViewAnswersToQuestionsOnActivity.aspx" 
+                                                    Text="Answers For Queries" Value="Answers For Queries"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="E-Mails" Value="Admin Activities">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmComposeMail.aspx" Text="Compose Mail" 
+                                                    Value="Compose Mail"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmInbox.aspx" Text="Inbox Mails" 
+                                                    Value="Inbox Mails"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmOutBox.aspx" Text="Outbox Mails" 
+                                                    Value="Outbox Mails"></asp:MenuItem>
+                                                <asp:MenuItem Text="Group Caht" Value="Group Caht" 
+                                                    NavigateUrl="~/Members/frmMemberChatRoom.aspx"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Forums" Value="Forums" NavigateUrl="~/Members/frmForumDiscussionDetails.aspx">
+                                                
+                                               
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Sign Out" Value="Sign Out" NavigateUrl="~/SignOut.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                        </Items>
+                                    </asp:Menu>
+                                </td>
+                                 <td width="13%" class="style5"><%=Session["UserName"].ToString().ToUpper() %></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                  <tr>
+                     <td width="80%">
+                          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                        </td>
+                  </tr>
+                </table>
+           
+      
+       
+    </form>
+</body>
+</html>
